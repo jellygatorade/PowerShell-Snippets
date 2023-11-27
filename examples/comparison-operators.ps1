@@ -48,9 +48,35 @@ catch [System.Management.Automation.RuntimeException] { 'Error: {0}' -f $_.Excep
 Write-Host $($a.GetType() -is $b.GetType())
 Write-Host $($a.GetType() -isnot $b.GetType())
 
+Write-Host "`n" # blank line
+
+
+# matching - wildcard strings
+
+"PowerShell" -like    "*shell"           # Output: True
+"PowerShell" -notlike "*shell"           # Output: False
+"PowerShell" -like    "Power?hell"       # Output: True
+"PowerShell" -notlike "Power?hell"       # Output: False
+"PowerShell" -like    "Power[p-w]hell"   # Output: True
+"PowerShell" -notlike "Power[p-w]hell"   # Output: False
+
+"PowerShell", "Server" -like "*shell"    # Output: PowerShell
+"PowerShell", "Server" -notlike "*shell" # Output: Server
+
+Write-Host "`n" # blank line
+
+
+# matching - Regex
+"PowerShell" -match    '^Power\w+' # Output: True
+'bag'        -notmatch 'b[iou]g'   # Output: True
+
+"PowerShell", "Super PowerShell", "Power's hell" -match '^Power\w+'  # Output: PowerShell
+"Bag", "Beg", "Big", "Bog", "Bug"  -match 'b[iou]g'                  # Output: Big, Bog, Bug
+
+
 # Todo
 #
-# Matching
+# Matching - Regex $Matches hashtable - Write-Host $Matches[0]
 # Replacement
 # Containment
 #
