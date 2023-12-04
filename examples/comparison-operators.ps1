@@ -10,6 +10,11 @@ Write-Host "`n" # blank line
 # See
 # https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_comparison_operators?view=powershell-5.1
 
+# Todo
+#
+# Matching - Regex $Matches hashtable - Write-Host $Matches[0]
+# Containment
+
 # equality
 
 Write-Host $(0 -eq 1) # equals
@@ -74,12 +79,8 @@ Write-Host "`n" # blank line
 "Bag", "Beg", "Big", "Bog", "Bug"  -match 'b[iou]g'                  # Output: Big, Bog, Bug
 
 
-# Todo
-#
-# Matching - Regex $Matches hashtable - Write-Host $Matches[0]
 # Replacement
-# Containment
-#
-# See
-# https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_comparison_operators?view=powershell-5.1
 
+"book" -replace "B", "C"  # By default, the -replace operator is case-insensitive
+"book" -ireplace "B", "C" # Case insensitive
+"book" -creplace "B", "C" # Case-sensitive; hence, nothing to replace
