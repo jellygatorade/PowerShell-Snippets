@@ -13,7 +13,8 @@ Write-Host "`n" # blank line
 # Todo
 #
 # Matching - Regex $Matches hashtable - Write-Host $Matches[0]
-# Containment
+# Containment - in and notin
+# Type comparison
 
 # equality
 
@@ -84,3 +85,34 @@ Write-Host "`n" # blank line
 "book" -replace "B", "C"  # By default, the -replace operator is case-insensitive
 "book" -ireplace "B", "C" # Case insensitive
 "book" -creplace "B", "C" # Case-sensitive; hence, nothing to replace
+
+Write-Host "`n" # blank line
+
+
+# Containment
+
+"abc", "def" -contains "def"                  # Output: True
+"abc", "def" -notcontains "def"               # Output: False
+"Windows", "PowerShell" -contains "Shell"     # Output: False
+"Windows", "PowerShell" -notcontains "Shell"  # Output: True
+"abc", "def", "ghi" -contains "abc", "def"    # Output: False
+"abc", "def", "ghi" -notcontains "abc", "def" # Output: True
+
+$DomainServers = "ContosoDC1","ContosoDC2","ContosoFileServer","ContosoDNS",
+                 "ContosoDHCP","ContosoWSUS"
+$thisComputer  = "ContosoDC2"
+
+$DomainServers -contains $thisComputer        # Output: True
+
+# When the right-hand side operand is a collection, 
+# these operators convert the value to its string representation 
+# before comparing it to the left-hand side collection.
+
+$a = "abc", "def"
+"abc", "def", "ghi" -contains $a # Output: False
+
+# The following statements are equivalent
+$a, "ghi" -contains $a           # Output: True
+"$a", "ghi" -contains $a         # Output: True
+"abc def", "ghi" -contains $a    # Output: True
+
