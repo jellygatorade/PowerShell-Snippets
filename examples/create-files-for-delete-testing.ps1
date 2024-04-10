@@ -1,6 +1,6 @@
-﻿$parentDirPath = "C:\Users\kkane.MOA\Non-OneDrive\PowerShell\Test Directory"
-$folderNames = 1,2,3,4
-$fileNames = "foo","bar","baz", "etc"
+﻿$parentDirPath  = "C:\Users\kkane.MOA\Non-OneDrive\PowerShell\Test Directory"
+$folderNames    = 1,2,3,4
+$fileNames      = "foo","bar","baz", "etc"
 $fileExtensions = "jpg", "png", "txt", "tif", "cr2", "dng"
 
 Foreach ($i in $folderNames) {
