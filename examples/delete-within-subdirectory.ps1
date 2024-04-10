@@ -12,7 +12,8 @@ $filtersWildcard  = '*.jpg' , '*.png', '*.tif'
 #Get-ChildItem $parentDirPath -Recurse | Where {$filters1 -contains $_.extension} | % { Write-Host $_.FullName }
 
 # Find all paths to delete
-# Resolve-Path Method - faster because doesn't 
+# Resolve-Path Method
+# Faster than Get-ChildItem because doesn't read all the extra data that Get-ChildItem does
 
 $filtersWildcard | % { Join-Path $parentDirPath $_ } | Resolve-Path | % { Write-Host $_ }
 
