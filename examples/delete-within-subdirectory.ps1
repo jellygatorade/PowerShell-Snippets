@@ -16,7 +16,6 @@
 
 $parentDirPath      = "C:\Users\kkane.MOA\Non-OneDrive\PowerShell\Test Directory\*\Trash"
 $extFilters         = '.jpg' , '.png', '.tif'
-#$extFiltersWildcard = @()
 $deletePaths        = @()
 
 # Setup - Functions ---------------------------------------------------
