@@ -12,12 +12,56 @@
 #
 # ---------------------------------------------------------------------
 
+
 # Setup - Variables ---------------------------------------------------
 
 $parentDirPath      = "C:\Users\kkane.MOA\Non-OneDrive\PowerShell\Test Directory\*\Trash"
-$extFilters         = @('.jpg' , '.png', '.tif')
+$extFilters         = @('.3fr',
+                        '.ari', 
+                        '.arw',
+                        '.bay',
+                        '.braw', 
+                        '.crw', 
+                        '.cr2', 
+                        '.cr3',
+                        '.cap',
+                        '.data', 
+                        '.dcs', 
+                        '.dcr', 
+                        '.dng',
+                        '.drf',
+                        '.eip', 
+                        '.erf',
+                        '.fff',
+                        '.gpr',
+                        '.iiq',
+                        '.k25', 
+                        '.kdc',
+                        '.mdc', 
+                        '.mef', 
+                        '.mos', 
+                        '.mrw',
+                        '.nef', 
+                        '.nrw',
+                        '.obm', 
+                        '.orf',
+                        '.pef', 
+                        '.ptx', 
+                        '.pxn',
+                        '.r3d', 
+                        '.raf', 
+                        '.raw', 
+                        '.rwl', 
+                        '.rw2', 
+                        '.rwz',
+                        '.sr2', 
+                        '.srf', 
+                        '.srw',
+                        '.tif',
+                        '.x3f')
 $deletePaths        = @()
 $extFiltersWildcard = @()
+
 
 # Setup - Functions ---------------------------------------------------
 
@@ -103,6 +147,7 @@ function LaunchFindDeleteProcess {
     }
 
 }
+
 
 # Init / Execute ------------------------------------------------------
 
