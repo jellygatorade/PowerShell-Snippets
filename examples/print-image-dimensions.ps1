@@ -1,4 +1,5 @@
-﻿$targetFolder = "C:\Users\kkane.MOA\Non-OneDrive Docs\Node Projects\!projects\cloud-chambers-map\src\common\assets\images"
+﻿#$targetFolder = "C:\Users\user\path\to\images\folder"
+$targetFolder = Read-Host "Full path to directory you want to read image dimensions from"
 $shellApp = New-Object -ComObject 'shell.application'
 $folderNamespace = $shellApp.Namespace($targetFolder)
 
