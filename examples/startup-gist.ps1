@@ -4,13 +4,13 @@
 
 # $FilePath = 'C:\Users\Username\Desktop\Path\To\executable.exe'
 # $FilePath = 'C:\Users\Username\Desktop\Path\To\video.mp4' 
-$FilePath = 'file:///C:/Users/kkane.MOA/Downloads/mockup-still-009.png'
+$FilePath = 'file:///C:/Users/Username/Path/To/image.png'
 
 # $ProgramToRun = 'executable'
 # $ProgramToRun = 'mpc'
 # $ProgramToRun = 'vlc'
-$ProgramToRun = 'chrome'
-# $ProgramToRun = 'edge'
+# $ProgramToRun = 'chrome'
+$ProgramToRun = 'edge' # See note on setting up msedge.exe below
 
 
 # Notes -----------------------------------------------------------
