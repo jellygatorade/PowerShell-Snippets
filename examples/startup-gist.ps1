@@ -13,6 +13,19 @@ $ProgramToRun = 'chrome'
 # $ProgramToRun = 'edge'
 
 
+# Notes -----------------------------------------------------------
+# -----------------------------------------------------------------
+# -----------------------------------------------------------------
+
+# MPC command line - ? https://superuser.com/questions/1121625/open-a-video-at-a-specific-time-in-media-player-classic
+
+# VLC command line - https://wiki.videolan.org/Documentation:Command_line/#Use_the_command_line
+
+# Chromium command line (for Chrome and Edge) - https://peter.sh/experiments/chromium-command-line-switches/
+
+# For msedge.exe --start-fullscreen switch to work, open Edge -> 3 dots (hamburger menu) -> Settings -> System and Performance -> Disable 'Startup boos't & Disable 'Continue running background extensions and apps when Microsoft Edge is closed'
+
+
 # -----------------------------------------------------------------
 # Do not edit below - unless you are familiar with PowerShell -----
 # -----------------------------------------------------------------
@@ -22,8 +35,6 @@ $mpc_exe_path = 'C:\Path\To\K-Lite Codec Pack\MPC-HC64\mpc-hc64.exe'
 $vlc_exe_path = 'C:\Program Files (x86)\VideoLAN\VLC\vlc.exe'
 $chrome_exe_path = 'C:\Program Files\Google\Chrome\Application\chrome.exe'
 $edge_exe_path = 'C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe'
-
-Write-Host $ProgramToRun $
 
 Switch ($ProgramToRun)
 {
@@ -45,7 +56,6 @@ Switch ($ProgramToRun)
     }
     "edge" 
     {  
-        # For msedge.exe --start-fullscreen switch to work, open Edge -> 3 dots (hamburger menu) -> Settings -> System and Performance -> Disable 'Startup boos't & Disable 'Continue running background extensions and apps when Microsoft Edge is closed'
         & $edge_exe_path --start-fullscreen $FilePath
     }
     default
