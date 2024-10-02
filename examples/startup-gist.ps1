@@ -13,6 +13,7 @@ $FilePath = 'file:///C:/Users/Username/Path/To/image.png'
 $ProgramToRun = 'edge' # See note on setting up msedge.exe below
 
 
+
 # Notes -----------------------------------------------------------
 # -----------------------------------------------------------------
 # -----------------------------------------------------------------
@@ -24,6 +25,7 @@ $ProgramToRun = 'edge' # See note on setting up msedge.exe below
 # Chromium command line (for Chrome and Edge) - https://peter.sh/experiments/chromium-command-line-switches/
 
 # For msedge.exe --start-fullscreen switch to work, open Edge -> 3 dots (hamburger menu) -> Settings -> System and Performance -> Disable 'Startup boos't & Disable 'Continue running background extensions and apps when Microsoft Edge is closed'
+
 
 
 # -----------------------------------------------------------------
