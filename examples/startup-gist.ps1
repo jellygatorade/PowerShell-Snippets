@@ -55,6 +55,7 @@ Switch ($ProgramToRun)
     "chrome" 
     {  
         & $chrome_exe_path --start-fullscreen $FilePath
+        # & $chrome_exe_path --kiosk --start-fullscreen $FilePath
     }
     "edge" 
     {  
